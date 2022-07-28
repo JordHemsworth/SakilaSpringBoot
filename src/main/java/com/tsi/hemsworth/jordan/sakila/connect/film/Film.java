@@ -1,4 +1,4 @@
-package com.tsi.hemsworth.jordan.sakila.connect;
+package com.tsi.hemsworth.jordan.sakila.connect.film;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.persistence.*;
@@ -28,7 +28,6 @@ public class Film {
     private String special_features;
    // private String last_update;
 
-
     public Film(String title, String description, Integer release_year, Integer language_id, Integer rental_duration,
                 BigDecimal rental_rate, Integer length, BigDecimal replacement_cost, String rating, String special_features) {
         this.title = title;
@@ -43,7 +42,6 @@ public class Film {
         this.special_features = special_features;
 
     }
-
 
     //Empty Constructor
     public Film() {
@@ -84,14 +82,6 @@ public class Film {
     public Integer getLanguage_id() {
         return language_id;
     }
-
-//    public void setLanguage_id(Integer language_id) {
-//        this.language_id = language_id;
-//    }
-//
-//    public Integer getOriginal_language_id() {
-//        return original_language_id;
-//    }
 
     public void setOriginal_language_id(Integer original_language_id) {
         this.original_language_id = original_language_id;
@@ -144,10 +134,6 @@ public class Film {
     public void setSpecial_features(String special_features) {
         this.special_features = special_features;
     }
-
-//    public String getLast_update() {
-//        return last_update;
-//    }
 
 
 }
