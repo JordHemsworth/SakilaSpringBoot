@@ -1,9 +1,11 @@
 package com.tsi.hemsworth.jordan.sakila.connect.film;
+import com.tsi.hemsworth.jordan.sakila.connect.filmActor.FilmActor;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Set;
 
 @Entity
 @Table(name="film")
@@ -13,6 +15,10 @@ public class Film {
     @Column(name = "film_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int film_id;
+
+
+    @OneToMany(mappedBy = "film")
+    Set<FilmActor> filmsActors;
 
     //Attributes
     private String title;
@@ -42,6 +48,7 @@ public class Film {
         this.special_features = special_features;
 
     }
+
 
     //Empty Constructor
     public Film() {

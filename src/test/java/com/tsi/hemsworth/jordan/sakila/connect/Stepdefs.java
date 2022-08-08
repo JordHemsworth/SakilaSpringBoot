@@ -1,29 +1,28 @@
 package com.tsi.hemsworth.jordan.sakila.connect;
 
+import com.tsi.hemsworth.jordan.sakila.connect.category.Category;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class IsItFriday {
-    static String isItFriday(String today) {
-        return today.equals("Friday") ? "Yeah" : "Nope";
-    }
-}
-
 public class Stepdefs {
-    private String today;
+
     private String actualAnswer;
 
-    @Given("today is {string}")
-    public void today_is_string(String day) {
-        today = day;
-    }
+    Category category = new Category();
 
-    @When("I ask whether it's Friday yet")
-    public void i_ask_whether_it_s_Friday_yet() {
-        actualAnswer = IsItFriday.isItFriday(today);
+
+    @Given("the category name is Action.")
+    public void the_category_name_is_action() {
+        category.setName("Action");
+
+    }
+    @When("I ask what the category name is.")
+    public void i_ask_what_the_category_name_is() {
+        actualAnswer = category.getName();
+
     }
 
     @Then("I should be told {string}")

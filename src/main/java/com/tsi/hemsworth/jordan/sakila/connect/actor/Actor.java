@@ -1,7 +1,10 @@
 package com.tsi.hemsworth.jordan.sakila.connect.actor;
 
 
+import com.tsi.hemsworth.jordan.sakila.connect.filmActor.FilmActor;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="actor")
@@ -10,7 +13,7 @@ public class Actor {
     @Id
     @Column(name="actor_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int actor_id;
+    private int id;
 
     //Attributes
     @Column(name="first_name")
@@ -18,30 +21,33 @@ public class Actor {
     @Column(name="last_name")
     private String lastName;
 
-    public Actor(String first_name, String last_name){
-        this.firstName=first_name;
-        this.lastName =last_name;
+    //FilmActor relationship
+    @OneToMany(mappedBy = "actor")
+    private Set<FilmActor> actorsFilms;
+
+    public Actor(String firstName, String lastName){
+        this.firstName=firstName;
+        this.lastName =lastName;
     }
 
     //Empty Constructor
     public Actor() {}
 
     //Getter and Setters
-
-    public int getActor_id() {
-        return actor_id;
+    public int getId() {
+        return id;
     }
 
-    public void setActor_id(int actor_id) {
-        this.actor_id = actor_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getFirst_name() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.firstName = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {

@@ -9,7 +9,7 @@ public class Category {
     @Id
     @Column(name="category_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int categoryId;
+    private int id; //Fails to create query for method public abstract if not called id
 
     //Attributes
     @Column(name="name")
@@ -21,12 +21,12 @@ public class Category {
 
     public Category(){}
 
-    public int getCategory_id() {
-        return categoryId;
+    public int getCategoryId() {
+        return id;
     }
 
-    public void setCategory_id(int categoryId) {
-        this.categoryId = categoryId;
+    public void setCategoryId(int categoryId) {
+        this.id = id;
     }
 
     public String getName() {
