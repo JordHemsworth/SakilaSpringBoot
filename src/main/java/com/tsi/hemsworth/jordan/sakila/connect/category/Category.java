@@ -26,7 +26,7 @@ public class Category {
     }
 
     public void setCategoryId(int categoryId) {
-        this.id = id;
+        this.id = categoryId;
     }
 
     public String getName() {
