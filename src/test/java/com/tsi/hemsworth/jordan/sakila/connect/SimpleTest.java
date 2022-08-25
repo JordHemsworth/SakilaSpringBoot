@@ -39,4 +39,11 @@ public class SimpleTest {
         assertEquals("1", testRating.getRating());
     }
 
+
+    @Test
+    public void test_GetLength(){
+        Film testLength = new Film();
+        testLength.setLength(120);
+        assertEquals(120, testLength.getLength());
+    }
 }
