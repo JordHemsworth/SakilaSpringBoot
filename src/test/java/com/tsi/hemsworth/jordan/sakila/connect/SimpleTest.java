@@ -160,8 +160,8 @@ public class SimpleTest {
     @Test
      void test_GetLangUpdate(){
         Language testRating = new Language();
-        testRating.setLastUpdate("21/04/2020");
-        assertEquals("21/04/2020", testRating.getLastUpdate());
+        testRating.setLastUpdate("21/04/2021");
+        assertEquals("21/04/2021", testRating.getLastUpdate());
     }
 
 
