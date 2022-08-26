@@ -1,7 +1,6 @@
 package com.tsi.hemsworth.jordan.sakila.connect.film;
 
-import com.tsi.hemsworth.jordan.sakila.connect.film.Film;
-import com.tsi.hemsworth.jordan.sakila.connect.film.FilmRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

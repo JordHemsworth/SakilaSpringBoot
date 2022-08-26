@@ -1,9 +1,7 @@
 package com.tsi.hemsworth.jordan.sakila.connect.language;
 
-import com.tsi.hemsworth.jordan.sakila.connect.film.Film;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "language")

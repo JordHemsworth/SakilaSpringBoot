@@ -1,7 +1,6 @@
 package com.tsi.hemsworth.jordan.sakila.connect.category;
 
 
-import com.tsi.hemsworth.jordan.sakila.connect.actor.Actor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

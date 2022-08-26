@@ -1,6 +1,5 @@
 package com.tsi.hemsworth.jordan.sakila.connect.category;
 
-import com.tsi.hemsworth.jordan.sakila.connect.actor.Actor;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

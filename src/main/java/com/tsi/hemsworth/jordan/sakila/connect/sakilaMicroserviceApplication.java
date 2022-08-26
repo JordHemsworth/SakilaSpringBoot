@@ -1,6 +1,5 @@
 package com.tsi.hemsworth.jordan.sakila.connect;
 
-import com.tsi.hemsworth.jordan.sakila.connect.actor.Actor;
 import com.tsi.hemsworth.jordan.sakila.connect.actor.ActorRepository;
 import com.tsi.hemsworth.jordan.sakila.connect.film.Film;
 import com.tsi.hemsworth.jordan.sakila.connect.film.FilmRepository;
@@ -9,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
 
 @CrossOrigin("http://localhost:3306")
 @SpringBootApplication

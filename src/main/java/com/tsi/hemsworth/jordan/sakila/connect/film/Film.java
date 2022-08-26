@@ -1,10 +1,9 @@
 package com.tsi.hemsworth.jordan.sakila.connect.film;
 import com.tsi.hemsworth.jordan.sakila.connect.filmActor.FilmActor;
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Set;
 
 @Entity
@@ -32,7 +31,7 @@ public class Film {
     private BigDecimal replacement_cost;
     private String rating;
     private String special_features;
-   // private String last_update;
+
 
     public Film(String title, String description, Integer release_year, Integer language_id, Integer rental_duration,
                 BigDecimal rental_rate, Integer length, BigDecimal replacement_cost, String rating, String special_features) {
