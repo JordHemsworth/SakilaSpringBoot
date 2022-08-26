@@ -90,6 +90,10 @@ public class Film {
         return language_id;
     }
 
+    public void setLanguage_id(Integer language_id) { this.language_id = language_id;}
+
+    public Integer getOriginal_language_id() { return original_language_id;}
+
     public void setOriginal_language_id(Integer original_language_id) {
         this.original_language_id = original_language_id;
     }

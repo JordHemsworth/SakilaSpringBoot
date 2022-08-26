@@ -8,6 +8,8 @@ import com.tsi.hemsworth.jordan.sakila.connect.filmActor.FilmActorKey;
 import com.tsi.hemsworth.jordan.sakila.connect.language.Language;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SimpleTest {
@@ -86,12 +88,12 @@ public class SimpleTest {
         assertEquals(2020, testRating.getRelease_year());
     }
 
-    /*@Test
+    @Test
     public void test_GetFilmLang(){
         Film testRating = new Film();
-        testRating.setL("1");
-        assertEquals("1", testRating.getRating());
-    }*/
+        testRating.setLanguage_id(1);
+        assertEquals(1, testRating.getLanguage_id());
+    }
 
     @Test
     public void test_GetFilmRentDur(){
@@ -100,12 +102,12 @@ public class SimpleTest {
         assertEquals(20, testRating.getRental_duration());
     }
 
-   /* @Test
+    @Test
     public void test_GetFilmRentRate(){
         Film testRating = new Film();
-        testRating.setRental_rate(1);
-        assertEquals(1, testRating.getRental_rate());
-    }*/
+        testRating.setRental_rate(BigDecimal.valueOf(10.99));
+        assertEquals(BigDecimal.valueOf(10.99), testRating.getRental_rate());
+    }
 
     @Test
     public void test_GetLength(){
@@ -114,12 +116,12 @@ public class SimpleTest {
         assertEquals(120, testLength.getLength());
     }
 
-    /*@Test
+    @Test
     public void test_GetFilmCost(){
         Film testLength = new Film();
-        testLength.setReplacement_cost(1);
-        assertEquals(1, testLength.getLength());
-    }*/
+        testLength.setReplacement_cost(BigDecimal.valueOf(10.99));
+        assertEquals(BigDecimal.valueOf(10.99), testLength.getLength());
+    }
 
     @Test
     public void test_GetRating(){
