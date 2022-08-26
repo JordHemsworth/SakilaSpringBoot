@@ -119,8 +119,9 @@ public class SimpleTest {
     @Test
     public void test_GetFilmCost(){
         Film testLength = new Film();
-        testLength.setReplacement_cost(BigDecimal.valueOf(10.99));
-        assertEquals(BigDecimal.valueOf(10.99), testLength.getLength());
+        BigDecimal value = (BigDecimal.valueOf(10.99));
+        testLength.setReplacement_cost(value);
+        assertEquals(value, testLength.getReplacement_cost());
     }
 
     @Test
