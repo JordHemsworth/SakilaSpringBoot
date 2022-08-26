@@ -164,6 +164,14 @@ public class SimpleTest {
         assertEquals("21/04/2020", testRating.getLastUpdate());
     }
 
+    @Test
+    void test_TestFilm(){
+        BigDecimal rentRate = (BigDecimal.valueOf(10.99));
+        BigDecimal rentCost = (BigDecimal.valueOf(10.99));
+        Film testFilm = new Film ("Test", "Description", 2020, 1, 4, rentRate, 120, rentCost, "PG", "Special");
+        assertEquals("Test", testFilm.getTitle());
+    }
+
 
 
 }
